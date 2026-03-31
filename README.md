@@ -22,3 +22,5 @@ This project aims to classify single cells grown in different media using pathwa
 * Scanpy
 * Scikit-learn
 
+## Data
+Dataset from GEO: GSE165686
