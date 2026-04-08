@@ -1,12 +1,12 @@
-Single-Cell Transcriptomics Analysis with Pathway-Based Machine Learning
+# Single-Cell Transcriptomics Analysis with Pathway-Based Machine Learning
 
- Overview
+ ### Overview
 
 This project analyzes single-cell RNA sequencing (scRNA-seq) data using pathway-level features derived from KEGG annotations. The goal is to classify cells based on their experimental conditions and to identify the biological processes driving these differences.
 
 ---
 
- Dataset
+ ### Dataset
 GEO accession: GSE165686
 SOURCE: NCBI Gene expression Omnibus (GEO)
 
@@ -19,55 +19,55 @@ Gene expression values are processed and transformed into pathway-level features
 
 ---
 
- Pipeline
+ ### Pipeline
 
-1. Preprocessing
+*1. Preprocessing*
 
 - Library size normalization
 - Log transformation
 - Quality checks and distribution analysis
 
-2. Functional Annotation (KEGG)
+*2. Functional Annotation (KEGG)*
 
 - Download KEGG hierarchical file
 - Parse pathway structure
 - Map genes to pathways
 
-3. Pathway Feature Construction
+*3. Pathway Feature Construction*
 
 - Aggregate gene expression per pathway (mean)
 - Build pathway-level feature matrix (cells × pathways)
 
-4. Exploratory Analysis
+*4. Exploratory Analysis*
 
 - Distribution of pathway activity
 - PCA visualization
 
-5. Classification
+*5. Classification*
 
 - Model: Random Forest
 - Train/test split (stratified)
 - 5-fold cross-validation
 
-6. Evaluation
+*6. Evaluation*
 
 - Accuracy
 - Precision, Recall, F1-score (macro)
 - Confusion matrix
 
-7. Feature Importance
+*7. Feature Importance*
 
 - Identification of key pathways driving classification
 - Biological interpretation
 
-8. Comparative Analysis
+*8. Comparative Analysis*
 
 - Feature selection (top 20 pathways)
 - Mean vs median aggregation comparison
 
 ---
 
- Results
+ ### Results
 
 Model| Accuracy| F1 (macro)
 Mean (full)| 0.76| 0.73
@@ -83,7 +83,7 @@ Key Findings
 
 ---
 
- Interpretation
+ ### Interpretation
 
 The analysis reveals that differences between experimental conditions are primarily driven by pathways related to:
 
@@ -96,7 +96,7 @@ These findings suggest that cellular growth and stress responses play a central 
 ---
 
 
- Technologies Used
+ ### Technologies Used
 
 - Python
 - Scanpy
@@ -106,19 +106,19 @@ These findings suggest that cellular growth and stress responses play a central 
 
 ---
 
- Conclusions
+ ### Conclusions
 
 This project demonstrates that pathway-level feature engineering combined with machine learning provides an effective and interpretable approach for analyzing single-cell transcriptomic data. The choice of aggregation method is critical, with mean-based features outperforming median-based ones in sparse datasets.
 
 ---
 
- Notes
+ #### Notes
 
 - KEGG data were used for pathway annotation
 - Large raw files are excluded from version control (.gitignore)
 
 ---
 
- Author
+ #### Author
 
 Project developed as part of a computational genomics assignment.
