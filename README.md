@@ -69,13 +69,6 @@ Gene expression values are processed and transformed into pathway-level features
 
  ### Results
 
-Model| Accuracy| F1 (macro)
-Mean (full)| 0.76| 0.73
-Top 20 pathways| 0.74| 0.72
-Median| 0.57| 0.45
-
-Key Findings
-
 - Pathway-based features effectively capture biological differences between conditions
 - Protein synthesis and metabolic pathways are the most discriminative
 - A small subset of pathways retains most of the predictive power
